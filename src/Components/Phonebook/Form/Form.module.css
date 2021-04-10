@@ -6,6 +6,12 @@
    
 }
 
+.formInput {
+    border-radius: 10px;
+    
+    outline: none;
+}
+
 .label{
     display: grid;
     grid-gap: 5px;

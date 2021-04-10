@@ -1,17 +1,22 @@
 import { connect } from 'react-redux';
 import {
   changeFilter,
-  clearFilter,
+  // clearFilter,
 } from '../../../redux/Phonebook/phoneBook-action';
 import Filter from './Filter';
+import { getFilter } from '../../../redux/Phonebook/phoneBook-selectors';
 
 const mapStateToProps = state => ({
-  value: state.phoneList.filter,
+  value: getFilter(state),
 });
 
 const mapDispatchToProps = dispatch => ({
-  onChange: e => dispatch(changeFilter(e.target.value)),
-  onBlur: () => dispatch(clearFilter('')),
+  onChange: e =>
+    dispatch(changeFilter(e.target.value)),
+  // onBlur: () => dispatch(clearFilter('')),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Filter);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Filter);
