@@ -1,8 +1,4 @@
-import {
-  configureStore,
-  getDefaultMiddleware,
-} from '@reduxjs/toolkit';
-
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import phoneBookReduser from '../redux/Phonebook/phoneBook-reducer';
 
